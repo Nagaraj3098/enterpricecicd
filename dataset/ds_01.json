@@ -1,0 +1,73 @@
+{
+	"name": "ds_01",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "product_catalog.csv",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "ProductID",
+				"type": "String"
+			},
+			{
+				"name": "ProductName",
+				"type": "String"
+			},
+			{
+				"name": "Category",
+				"type": "String"
+			},
+			{
+				"name": "SubCategory",
+				"type": "String"
+			},
+			{
+				"name": "Brand",
+				"type": "String"
+			},
+			{
+				"name": "Price",
+				"type": "String"
+			},
+			{
+				"name": "AvgRating",
+				"type": "String"
+			},
+			{
+				"name": "ReviewCount",
+				"type": "String"
+			},
+			{
+				"name": "Attributes",
+				"type": "String"
+			},
+			{
+				"name": "Tags",
+				"type": "String"
+			},
+			{
+				"name": "LaunchDate",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
