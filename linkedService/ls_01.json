@@ -1,12 +1,18 @@
 {
 	"name": "ls_01",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"connectionString": "DefaultEndpointsProtocol=https;AccountName=ewstoragedemo;EndpointSuffix=core.windows.net;",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEUxNjBBMTMxLUE1MTUtNDdFRS05QTU2LTQyNTI4QUNBMzdFNV8xNWU5ZGYxYS1lM2JjLTRkYmItOWZiNy1jNDE5NjI3ZmM2MzEiDQp9"
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "Azurecicd",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "mynewcicds"
+			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
