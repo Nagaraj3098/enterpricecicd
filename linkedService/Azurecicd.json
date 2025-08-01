@@ -1,0 +1,10 @@
+{
+	"name": "Azurecicd",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://mycicdsetkey1.vault.azure.net/"
+		}
+	}
+}
